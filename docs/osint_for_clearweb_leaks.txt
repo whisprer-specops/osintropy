@@ -1,0 +1,173 @@
+OSINT Techniques for Sensitive Documents That Have Escaped Into The Clear Web
+Christina Lekati
+Christina Lekati
+
+·
+Follow
+
+7 min read
+·
+Mar 6, 2024
+
+Listen
+
+Share
+
+More
+
+I have been working full-time in this industry for about 8 years. Part of my work involves conducting vulnerability assessments for organizations based on open-source intelligence (OSINT). Another part revolves around training security teams of various organizations (we have a 2-day training called “Social Engineering for Security Teams”). This class has been delivered to teams around the globe within mixed groups (at conferences), large organizations, red teaming/penetration testing companies, and other organizations.
+
+Why am I saying this? There is a pattern in all these engagements that points to the same little issue. It was also the reason that prompted this blog.
+
+During training, when we reach the target reconnaissance section, specifically the “Discovering Sensitive Files & Documents” part, I ask participants to conduct some OSINT with the help of the filetype operators against their organization. Maybe they find something interesting.
+
+Every time, almost without fail, the vast majority of participants will find one or more documents available online that pose a considerable risk to the organization and should not have been available online. A number of participants will also end up finding documents that could pose a critical risk to the organization, if found by a threat actor. I end up with similar findings during my own projects/vulnerability assessments.
+
+This is not great.
+
+(Note that these class participants may be familiar with search engine operators and OSINT or have, at some point, heard that confidential files accidentally end up on the clear web. They just never took the time or considered it important enough to check if their organization has accidentally exposed a couple of important documents of their own.)
+
+Most of the time those documents end up on the clear web due to an employee mistake, lack of classification, or an oversight in the process. It is not too soon to do a quick search to identify and manage them before someone else does.
+
+You may be familiar with OSINT too. Maybe not. Take this chance and a few minutes to read this blog and run a quick OSINT check for documents and files related to your organization.
+
+The blog introduces creating advanced search queries and describes some of the most useful special characters/operators for document research.
+
+If you are already familiar with them, you may skip to the last part, which offers some ready-to-use query strings.
+
+Documents and Social Engineering Reconnaissance
+Looking for organizational documents is one of those areas in target reconnaissance where you can find some pretty useful gold nuggets. These may include:
+
+· Detailed contracts/ company agreements
+
+· Email conversations (yes, in .pdf; we have seen this too)
+
+· Internal process documentation (onboarding, security policies, etc.)
+
+· Confidential or sensitive documents (a mixed bag)
+
+· Admin credentials (more rarely)
+
+· and more
+
+These documents can expose a company to threat actors or their competitors who may conduct OSINT for business intelligence, the media/press, and other parties.
+
+Let’s see how we can do an initial search on the web:
+
+We will use Google Dorking since most people are familiar with the Google search engine.
+
+Dorks refer to search strings (queries) that contain & combine advanced search operators, special characters and keywords to locate specific information.
+
+They help you laser-focus your search and make it as specific as possible. They also help you clear out a lot of “noise” by eliminating irrelevant search results. You can search for a specific phrase, eliminate irrelevant groupings of results, look for specific file types, and tailor your search overall as you wish.
+
+Google dorks — use the specific Boolean operators that work with Google.
+
+(Note: You can create dorks in almost every search engine, social media platform, and every web page that offers the option. Google is not the only useful search engine, just one of them)
+
+Some tips:
+
+• Use incognito mode to prevent Google from curating your search results based on previous searches — NOT for privacy!
+
+• You may adjust your VPN & use country-specific search engines (e.g., Google.de) to get more location-specific result, if necessary.
+
+The Google Guide (https://www.googleguide.com/) offers good advice on search techniques. Most search engines have a similar guide.
+5 Useful Special Characters that you can add in every Google search:
+· Quotation marks “ ” — they ensure that your search results contain the specific phrase within the quotation, as-is.
+
+e.g., “Open-source intelligence”
+
+· Hyphen/minus sign — returns results that exclude the keyword followed by the hyphen. It helps you filter out results irrelevant to your search objective.
+
+e.g., “Open-source intelligence” -services
+
+· Parentheses/brackets ( ) — help you group multiple terms or operators together.
+
+e.g., (OSINT OR HUMINT)
+
+· Asterisk * — your wild card. The * represents a “wild card” within a search query It can be anything. It is often used for keyword inspiration.
+
+example 1: Christina Lekati * training — the asterisk would look for all of the training topics/titles I have ever provided and are indexed within Google. The results will look very different if you don’t include the asterisk.
+
+example 2: “Open-source intelligence” site:google.* — the “site:” operator is discussed below. In this example, the asterisk helps you search through multiple top-level domains.
+
+· Range .. — searches a range of numbers.
+
+e.g., 2017..2023
+
+5 Useful Operators that you can add in every Google search:
+OR → a OR b . This operator provides results containing just the keywords a, b, or both a and b.
+e.g., “Open-source Intelligence” OR OSINT
+
+· AND → a AND b — provides results that contain both keywords a and b.
+
+e.g., “Open-source Intelligence” AND OSINT
+
+· Site: → site:cyber-risk-gmbh.com returns results from the specified website only.
+
+e.g., site:cyber-risk-gmbh.com AND “social engineering”
+
+· InURL: → inurl:OSINT finds the pages with a particular word or phrase in their URL.
+
+e.g., inurl:social-engineering
+
+· InTitle: → gets you the pages with a certain word or phrase in their title tag.
+
+e.g., intitle:OSINT
+
+Note that you can only add one word or connected words (e.g., social-engineering) immediately after the operators “inurl” and “Intitle”.
+
+7 Useful Document & Filetype Operators:
+Here, we get to the main focus of this blog — the search for specific document types.
+
+This can be done through the operator “Filetype:” followed by the specified…well, file type.
+
+Some of the most popular operators are:
+
+· Powerpoint → filetype:ppt (or pptx)
+
+· Adobe Acrobat → filetype:pdf
+
+· Microsoft Word → filetype:doc (or docx)
+
+· Compressed file → filetype:7Z (or rar)
+
+· Microsoft excel → filetype:xls (or xlsx)
+
+· Text Files → filetype:txt (or rtf)
+
+· Images → filetype:jpeg (or jpg, png, etc.)
+
+Ready-To-Use Search Queries:
+We have gone through some basics. I HIGHLY encourage you to use some imagination, think creatively, and conduct some custom searches of your own by mixing and stitching some of the special characters and operators covered above, together with your own keywords. Nothing beats a wondering mind — no, not even ChatGPT, we have tried.
+
+On that note, please do not limit your thinking to the recommendations below. They are only a head start, and some inspiration.
+
+Alright, here we are, some ready-to-use queries:
+
+· “company name” AND internal (filetype:docx OR filetype:pdf)
+
+· Site:companyname.com AND “keywords” AND inurl:fileadmin
+
+· Site:companyname.com (filetype:pdf OR filetype:ppt OR filetype:xls)
+
+· “company name” AND confidential (filetype:ppt OR filetype:pdf)
+
+· Site:companyname.com AND (contract OR “internal use only”) filetype:pdf
+
+· “company name” AND (“service agreement” OR “memorandum”) -public
+
+You can create different variations of these keywords and operators. And add your own.
+
+I will stop here. Things only get more interesting after this point, but you get the idea. I cannot even count the amount of critical/high-risk posing type of documents that we have found over the years, either while conducting open-source intelligence vulnerability assessments or during our training classes.
+
+There are a lot, and they are out there. They shouldn’t be. But on a positive note, this type of risk is often easy to eliminate.
+
+Please run these searches on your organization before someone with less-than-noble intentions does. You can also hire a specialist to do a thorough, in-depth assessment of your public footprint.
+
+I hope this blog post has been helpful.
+
+Cyber Risk GmbH offers the “Social Engineering & Open-Source Intelligence for Security Teams” as an in-house training to companies and organizations around the globe. Are you interested in this training? You may contact us for details.
+
+Cyber Risk GmbH also provides Corporate Open Source Intelligence (OSINT) Assessments. Their objective is to identify possible risks and vulnerabilities that are public and available and leave the organization exposed to risks that threat actors can exploit. We understand that information exposure is often unavoidable or serves significant organizational interests. Unavoidably, this exposure comes with certain risks. Our findings are always followed with recommendations and advice to help organizations minimize or eliminate risks and act proactively against certain threats. We conduct OSINT as a defensive discipline to help organizations proactively deal with this problem and to help reduce or eliminate potential attack vectors. You may visit: https://www.cyber-risk-gmbh.com/Assessment.html
+
+For more updates, tips, and news you may also find Christina Lekati on LinkedIn and X/Twitter.

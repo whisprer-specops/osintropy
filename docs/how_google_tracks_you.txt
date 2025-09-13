@@ -1,0 +1,82 @@
+The Secret Code Google Uses To Monitor Everything You Do Online😲
+Tari Ibaba
+Coding Beauty
+Tari Ibaba
+
+·
+Follow
+
+Published in
+Coding Beauty
+
+4 min read
+·
+Oct 20, 2024
+
+Listen
+
+Share
+
+More
+
+Google now has at least 3 ways to track your search clicks and visits that they hide from you.
+
+Have you ever tried to copy a URL directly from Google Search?
+
+When I did that a few months ago I unexpectedly got something like this from my clipboard:
+
+I curiously visited the page and guess what? It took me straight to the original URL.
+
+This cryptic URL turned out to be a middleman that would redirect you to the actual page.
+
+But what for?
+
+After some investigation, I discovered that this was how Google Search had been recording our clicks and tracking every single visited page.
+
+They set custom data- attributes and a mousedown event on each link in the search results page:
+
+A JavaScript function would change the href to a new URL with several parameters including the original URL, as soon as you start clicking on it.
+
+So even though the browser would show the actual URL at the bottom-left on hover, once you clicked on it to copy, the href would change instantly.
+
+Why mousedown over click? Probably because there won't be a click event when users open the link in a new tab, which is something that happens quite often.
+
+And so after right-clicking to copy like I did, mousedown would fire and the href would change, which would even update that preview URL at the bottom-left.
+
+The new www.google.com/url page would log the visit and move out of the way so fast you'd barely notice it -- unless your internet moves at snail speed.
+
+They use this data for tools like Google Analytics and Search Console so site owners can improve the quality of their search results and pages by analyzing click-rate — something probably also using as a Search ranking factor. Not to mention recording clicks on Search ads to rake all the billions of yearly ad revenue.
+
+But Google got smarter.
+
+They realized this URL tracking method had a serious issue for a certain group. For their users with slower internet speeds, the annoying redirect technique added a non-trivial amount of delay to the request and increased bounce rate.
+
+So they did something new.
+
+Now, instead of that cryptic www.google.com/url stuff, you get... the same exact URL?
+
+With the <a> ping attribute, they have now successfully moved their tracking behind the scenes.
+
+The ping attribute specifies one or more URLs that will be notified when the user visits the link. When a user opens the link, the browser asynchronously sends a short HTTP POST request to the URLs in ping.
+
+The keyword here is asynchronously — www.google.com/url quietly records the click in the background without ever notifying the user, avoiding the redirect and keeping the user experience clean.
+
+Browsers don’t visually indicate the ping attribute in any way to the user — a specification violation.
+
+When the ping attribute is present, user agents should clearly indicate to the user that following the hyperlink will also cause secondary requests to be sent in the background, possibly including listing the actual target URLs.
+
+HTML Standard (whatwg.org)
+
+Not to mention a privacy concern, which is why browsers like Firefox refuse to enable this feature by default.
+
+In Firefox Google sticks with the mousedown event approach:
+
+There are many reasons not to disable JavaScript in 2023, but even if you do, Google will simply replace the href with a direct link to www.google.com/url.
+
+So, there’s really no built-in way to avoid this mostly invisible tracking.
+
+Even though analytics are highly beneficial for Google and site owners in improving result relevancy and site quality, as users we should be aware of the existence and implications of these tracking methods.
+
+It raises important questions about online privacy and the control we have over our personal information.
+
+As technology becomes more integrated into our lives, we will increasingly have to choose between privacy and convenience and ask ourselves whether the trade-offs are worth it.

@@ -1,0 +1,113 @@
+TOP of my free OSINT tools in 2024
+Igor S. Bederov
+Igor S. Bederov
+
+·
+Follow
+
+8 min read
+·
+Apr 23, 2024
+
+Listen
+
+Share
+
+More
+
+I continue my annual column of the best tools for OSINT. I note that Western services continue to disconnect Russians. However, new ones are taking their place, some of which are created within the country, which cannot but please me personally. Well, we’ll also talk about such tools today. Go!
+
+DISCLAIMER: This article is written for informational purposes and is not a guide to illegal actions or training material for concealing offenses.
+
+Part one. Timeless classic
+In the first part of the review, I will talk about those tools that remain in my rating and heart. These undoubtedly include the following services and software.
+
+Archivarius 3000
+An omnivorous tool designed to process any type of text file, search through it and extract named entities. Due to its functionality, it can be used as a non-relational database, allowing you to search by group of identifiers, partial data, or simply by string.
+
+Archivarius 3000
+In addition, the program is an excellent tool for exploring the extracted data. For example, correspondence, details and exported Telegram channels. The last function is very actively used in our investigation department — to download phone numbers, email addresses, hyperlinks and UTM tags from the channel body, which can later be used to identify community administrators.
+
+Venator
+A multifunctional OSINT browser that has not only grown to v.11, but also acquired two “brothers” at once. Meet Venator Red, a special build of the browser for exploring the darknet, and Venator Security, a version with an increased emphasis on security.
+
+Venator
+The browser is built on the basis of Librewolf and includes both built-in extensions and excellent collections of useful sources, divided by topic. I, of course, double the number of sources… Specifics. Interestingly, the browser can also be downloaded to a flash drive and carried with you. The result is a convenient mobile workstation that can be run on any computer. A definite like.
+
+Google Spreadsheets
+An excellent, in my professional opinion, tool for analyzing any data, as well as prototyping OSINT services. Just imagine, over the past year I have created, through Spreadsheets, the most convenient services designed for researching Telegram channels, phone numbers, checking and permuting nicknames, analyzing details and billing mobile operators (including with cartographic representation of data).
+
+SheetINT
+
+SheetINT
+
+SheetINT
+Spreadsheets have a large number of extensions, add-ons, automate work with dorks (expanded search query operators), and also allow the possibility of connecting external APIs. So where are you going now without signs? Don’t even think about it! By the way, about dorks. To avoid the hassle of writing them, I suggest using solutions such as Dork Search, Advangle or DorkGenius.
+
+Start.me
+Bookmark manager and another permanent participant in my annual recommendations. To begin with, the manager is used by almost all well-known OSINT specialists around the world. This means that their public collections of useful sources, software and work methods may be available to you. In addition, the manager can be used as a tool for displaying various dashboards, video streams from surveillance cameras and RSS news feeds.
+
+Start.me
+And that is not all. Start also allows you to build in logging, which makes it possible to turn your selection of sources into a powerful tool with which you can find out data about the connection, operating system, browser, device and geolocation of the user of the global web.
+
+In particular, such logging can be done using the CanaryTokens and IP Logger services, which also retained their place in my selection. Both services are designed to obtain technical information about visitors to web pages and for their subsequent identification.
+
+Pinpoint
+A free cloud product of the eDiscovery class (electronic evidence base) from Google. It allows you to search for the necessary information and facts in the case materials. Can recognize text, even handwritten, in pictures and scanned documents. Allows you to transcribe audio and video recordings into text with timing indication. Automatically identifies names, organizations, geographic locations.
+
+Pinpoint
+As a conditional alternative to the product, I can also recommend Datashare, installed on a PC. It has similar functionality, with the exception of transcription (Google has no equal here), and also allows the connection of external modules and plugins for data analysis.
+
+Part two. Promising new products
+Now let’s move on to the tools that have not yet received a place in my selection. New tools and alternatives to services that have denied access to Russians are emerging. So, let’s see which software is worthy of every OSINT professional’s attention this year.
+
+Arkham Intelligence
+A free, professional-grade analytical service designed for cryptocurrency investigations. Works with most blockchains and has amazing analytical capabilities for tracking transactions, including those within DeFi projects. Effectively and intuitively, and most importantly, clearly allows you to display large data both in tabular form and in a graph. A definite TOP for today.
+
+Arkham Intelligence
+For those who like simpler options, I can also recommend turning your attention to the MetaSleuth service. Also quite good in terms of its functionality. Among the Russian software for crypto research, it is worth mentioning the PRO-Blockchain (my development) and Shard services.
+
+PRO-Blockchain
+Osintracker
+An investigation visualization tool accessible through a browser. The simplest alternative to SpiderFoot (which refused to work with Russians), as well as paid Maltego, IBM i2, Lampyre, Palantir. The service involves the active use of dorks and external modules, some of which you can implement yourself. A selection of your own sources or an investigation can be transferred between devices. Investigations are easily exported in graphical or tabular form.
+
+Osintracker
+By the way, I’ll tell you how you can replace SpiderFoot and analogues when researching web resources. Use VirusTotal, Pulsedive and urlscan.io.
+
+VirusTotal
+A special emphasis here should be placed on VirusTotal, it is simply amazing. Especially if you finally find the Graph button, which allows you to open a graph representation of the data of the resource being studied. A must have in my annual selection.
+
+Obsidian
+As well as an extensive list of note-taking programs (Logseq, Reor, Notion, Capacities, KeepNote and others). All of them allow you to work offline or through a browser, document investigations, and delve deeper into certain materials. In my opinion, it is ideal for preparing lectures and conducting research (scientific research).
+
+Obsidian
+
+Logseq
+
+Capacities
+
+KeepNote
+In addition, the ability to visualize the presentation of data, as well as connect external APIs, make it possible to turn seemingly simple note managers into serious analytical tools that allow you to conduct complex investigations and generate ready-made materials based on them.
+
+Apparatus sapiens
+My own build of AI designed to conduct various types of investigations. In particular, I taught Neuron to assess the trustworthiness of counterparties using open sources and collect information about administrators of Telegram channels. A Telegram bot is used as a user interface for my analysts to interact with the AI. By the way, you can learn more about Apparatus sapiens in the presentation.
+
+Apparatus sapiens
+And as a free alternative, I can recommend that you train your own neuron, and you can start training with ChatGPT, which is now available without registration.
+
+ChatGPT
+Among the interesting OSINT solutions with AI, I can also recommend GeoSpy — this is an excellent tool for GeoINT that allows you to find an approximate location from a photograph.
+
+GeoSpy
+ThreatHunter DRP
+Another of our developments designed to search for and neutralize threats on the Internet. The program monitors a huge number of darknet forums, Telegram channels and chats, including private ones. It records and analyzes all information leaks and preparations for hacker attacks on protected companies. In addition, ThreatHunter can be used to identify reputational risks and other illegal activities on the network.
+
+ThreatHunter DRP
+However, if you don’t need a professional solution, I suggest using the good old Google Alerts, which allows you to create a news stream (including in the form of RSS) for specified key queries. So Google Alerts also falls into our selection as the only free product of its class.
+
+Google Alerts
+That’s all for today. If you know any interesting tools for open source intelligence, feel free to share them in the comments to the article. I hope that this collection was able to give you new knowledge and tools. And we will return to this topic again in the spring of 2025!
+
+Igor S. Bederov
+
+😉👍 And subscribe to https://t.me/irozysk

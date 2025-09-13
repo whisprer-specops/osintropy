@@ -1,0 +1,155 @@
+17 FREE Tools for Comprehensive Email Investigation
+
+
+Practical OSINT
+·
+Follow
+Published in
+OSINT Team
+7 min read
+·
+Oct 27, 2024
+Listen
+Share
+More
+A complete guide for uncovering actionable insights on any email address.
+
+Image source: Author’s screenshot. This figure illustrates how Email OSINT can uncover digital footprints.
+In this article, I will demonstrate various web-based tools and Telegram bots that identify digital footprints linked to an email address.
+Each tool has been thoroughly tested for potential outcomes. Tools URLs, along with their interfaces, features and results, are provided in each section.
+Here’s what you can discover about an email:
+• Associated phone numbers
+• Profile URLs on platforms like X(Twitter), Facebook, GitHub, LinkedIn, Skype, Flickr, and more
+• Names of social media platforms and websites linked to the email
+• Ownership rights to any domain or website
+• Owner’s name and address
+• Profile pictures
+• Google reviews associated with the email account
+• Involvement in scam activities
+• Breached data, such as passwords, IP addresses, and other linked emails.
+Requirements
+Some of the tools require sign-up using an email address (such as Gmail or Yahoo), but none require a business email.
+For privacy reasons, it’s recommended to create a FAKE email account for using these services and avoid using your personal email.
+For insights on operational security (OPSEC), ethics, and privacy during OSINT investigations, feel free to check out my previous articles here and here.
+Telegram BOTs for Email Investigation
+1. Universal Search
+Link. https://t.me/UniversalSearchEasyBot
+This FREE Telegram bot uncovers profile pictures and links to various social media profiles associated with an email address, as shown in the figure below.
+
+Source. Results from the Universal Search Bot linked to an email address.
+2. AllinOneLeaksBOT
+Link. https://t.me/AllInOneLeaksBOT?start=ELjl-gI
+This Telegram bot offers a 7-day free access upon joining.
+It provides detailed information linked to an email address, such as names, phone numbers, addresses, IP addresses, dates of birth, passwords, and more, as shown in the following figure.
+• 
+Source. Results from AllinOneLeaksBOT linked to an email address.
+Web-based Tools for Email Investigation
+3. Avatar API
+Link. https://avatarapi.com/
+This tool reveals the profile picture and name associated with an email address.
+No sign-up is necessary to use this site.
+• 
+Image source: Avatar API
+4. CartrickClues
+Link. https://castrickclues.com/
+The free version of this website provides information about the owner’s name, profile picture, Google reviews, Google ID, and Skype username associated with an email.
+No sign-up is required on this site.
+• 
+Image source: CartrickClues
+• 
+• 
+5. Epieos
+Link. https://epieos.com/
+The free version of Epieos provides access to a profile picture, name, Skype account details, data breaches, and checks for social networks or websites linked to an email address.
+Sign-up is required for this site.
+• 
+Image source: Epieos
+• 
+6. Global Scam Database
+Link. https://scamsearch.io/
+This open-source database allows you to check if an email has been involved in scam activities.
+No sign-up is required to access this database.
+• 
+Image source: Global Scam Database
+• 
+7. Holehe
+Link. https://osint.rocks/
+The Holehe tool verifies if an email is registered on platforms like Twitter, Flickr, Instagram, and others.
+It gathers information from sites that use a “forgot password” feature.
+No sign-up is needed to use this tool.
+You can find additional information in the tool’s GitHub repository.
+Holehe works mainly as a command-line tool; however, a user-friendly web-based interface is also available, as shown below.
+• 
+Image source: osint.rocks
+• 
+8. RocketReach
+Link. https://rocketreach.co/
+RocketReach provides access to emails, phone numbers, and social media profiles for over 700 million professionals.
+Enter the target email address as shown below.
+Sign-up is required to access this site.
+• 
+Source. RocketReach
+9. OsintLeak
+Link. https://osintleak.com/
+This database offers 10 free searches daily, allowing you to uncover passwords, IP addresses, and social media accounts associated with a target email address.
+Sign-up is required to access this database.
+• 
+Source. OsintLeak
+• 
+10. LeackCheck
+Link. https://leakcheck.io/
+This site checks email addresses for data breaches, listing the platforms affected and the dates of the leaks.
+No sign-up is required.
+• 
+Source. leakcheck
+11. ActiveTK.jp
+Link. https://gmail-osint.activetk.jp/
+This tool retrieves the profile picture, name, and Google reviews associated with Gmail addresses.
+No sign-up is required to access this tool.
+• 
+Source. ActiveTK
+Copy and paste the output links into your browser, as shown below.
+• 
+12. Whoxy
+Link.https://www.whoxy.com/
+This site verifies ownership rights of an email address to any domain or website.
+It also identifies additional domains or websites registered with that email.
+No sign-up is needed to access this site.
+• 
+Source. Whoxy
+13. Reverse Whois Lookup
+Link. https://www.reversewhois.io/
+This site provides similar functionality to Whoxy, allowing you to check domain ownership and find other domains registered with a specific email address.
+No sign-up is required.
+• 
+Source. Reverse Whois Lookup
+14. BigDomainData
+Link.https://www.bigdomaindata.com/reverse-whois/
+This site checks domain or website ownership and lists additional domains, along with the owner’s name, address, and phone numbers associated with a given email.
+Sign-up is required to access the reverse email lookup features.
+• 
+Source. BigDomianData
+• 
+15. Email Address Breach Summary and Analysis
+Link.https://www.hotsheet.com/inoitsu/
+This platform checks if an email address appears in data breaches.
+It provides a summary of potential information at risk, alerts for critical personal identity exposure, and a relative risk rating, among other insights.
+No sign-up is required to access this site.
+• 
+Source. Inoitsu
+Email Username
+Until now, we have investigated full email addresses (e.g., example327@yahoo.com). However, the email username (example327) plays a crucial role in uncovering additional digital presence.
+In this regard, I would like to highlight two tools that can help investigate the username of an email address for further insights.
+16. Maigret OSINT Telegram Bot
+Link. https://t.me/osint_maigret_bot
+• 
+source. Maigret OSINT bot
+This free Telegram bot checks if a username exists across 3,000 websites.
+The resulting profiles are interactive, but you should manually verify the results to filter out misleading or incorrect profiles.
+17. WhatsMyName
+Link. https://whatsmyname.app/
+This site check if a username is available on 596 websites, the output is interactive, as shown below.
+No sign-up is required to access this site.
+• 
+
+"https://medium.com/tag/email-investigation?source=post_page-----2a8fe6188451--------------------------------

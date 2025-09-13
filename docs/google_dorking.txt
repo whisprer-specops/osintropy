@@ -1,0 +1,87 @@
+5 Google Dorking Tricks Hackers Don’t Want You to Know — Uncover Hidden Vulnerabilities Instantly!
+Khaleel Khan
+T3CH
+Khaleel Khan
+
+·
+Follow
+
+Published in
+T3CH
+
+3 min read
+·
+Aug 18, 2024
+
+Listen
+
+Share
+
+More
+
+Google Dorking, or Google hacking, involves using specialized search queries to uncover sensitive information indexed by Google. While initially created for SEO purposes, Google Dorks can reveal critical details like passwords, directories, and misconfigurations. This article delves into five advanced Google Dorks that every penetration tester should have in their toolkit, with practical examples to guide you.
+
+1. “site:<domain>” — Narrow Down the Target, Then Exclude Unwanted Pages
+Start by specifying a target domain using the site: operator, which limits search results to a specific website. To refine your results further, exclude common or irrelevant pages like homepages or generic subdomains using the - operator.
+
+site:example.com -www
+By excluding “www”, you can focus on subdomains that might host development environments, internal documentation, or even misconfigured web apps.
+
+Sample Query:
+site:example.com -www -blog
+This search could reveal subdomains or hidden paths that are often overlooked, leading to interesting attack vectors.
+
+2. Finding Publicly Posted Data on Popular Paste and Code Sites
+Popular platforms like Pastebin, JSFiddle, and CodePen are often used for sharing snippets of code and text. However, many users unknowingly post sensitive information publicly, like API keys, internal configurations, or even credentials.
+
+Example:
+
+site:pastebin.com "example.com"
+To target specific companies, you can include their domain name within the query, searching for references across these platforms.
+
+Sample Query:
+
+site:pastebin.com | site:jsfiddle.net | site:codepen.io "tesla.com"
+This query searches for mentions of “tesla.com” across multiple platforms where sensitive data might be accidentally exposed.
+
+3. Uncovering Vulnerable Web Pages with ext:php and inurl:?
+Many web applications built using PHP have vulnerable scripts exposed via query strings. The ext:php and inurl:? operators can help identify these pages, particularly those susceptible to SQL injection or LFI (Local File Inclusion) attacks.
+
+Example:
+
+site:example.com ext:php inurl:?
+This query filters for .php files containing a query string (indicated by ?). The results often include poorly secured pages where parameters are passed directly, making them prime targets for injection attacks.
+
+Sample Query:
+
+site:tesla.com ext:php inurl:?
+By narrowing the search to Tesla’s domain, you might uncover specific pages where improper input validation exists, revealing potential vulnerabilities.
+
+4. Hunting for File Upload Points Using choose file
+File upload forms are a common source of vulnerabilities, especially if they allow arbitrary file types or do not properly sanitize inputs. By using the choose file keyword, you can identify these upload fields.
+
+Example:
+
+(site:example.com | site:example.org) "choose file"
+This query looks for pages that present a file upload option, usually accompanied by a “choose file” button or label. Combining this with multiple domains broadens your scope.
+
+Sample Query:
+
+(site:tesla.com | site:teslamotors.com) "choose file"
+This search might reveal file upload pages across Tesla’s main sites, which could be exploited for RCE (Remote Code Execution) if not properly secured.
+
+5. Tracking Bug Reports Using inurl:reports and intext:
+Bug bounty platforms like Open Bug Bounty often publish detailed reports of vulnerabilities discovered by researchers. These reports might include steps to reproduce, which can be useful for red team operations.
+
+Example:
+
+site:openbugbounty.org inurl:reports intext:"example.com"
+By searching for the target company’s name within reports, you can find disclosed vulnerabilities that haven’t been patched yet.
+
+Sample Query:
+
+site:openbugbounty.org inurl:reports intext:"yahoo.com"
+This search reveals vulnerability reports related to Yahoo, potentially exposing weaknesses that can be further exploited or researched.
+
+Conclusion
+These advanced Google Dorks provide penetration testers with powerful tools to uncover sensitive data, hidden directories, and vulnerable pages that might otherwise be missed. Leveraging these search operators strategically can help streamline reconnaissance and identify weak points in a target’s digital footprint, offering valuable insights for your next red team operation.

@@ -1,0 +1,30 @@
+project:	create webscraping tool using  python so we can use beautiful soup
+
+it will go to: specifically linked in
+
+looking specifically for: good credit usa* peoples
+
+*i.e. +1, likely categories? older, often male, private practice lawyers, docs/clinicians etc., higher engines, higher end designers, lower execs,  lower managers etc.
+
+- has our work been done for us: guaranteed.
+- if so what's it cost? what people will pay probably i.e. fair but slightly costly.
+- what's it worth. same if used a lot. disadv. never grows, dwindles even so loses value. others have it.
+- has it value as a learning exercise? yis. so we proceed.
+
+#######
+
+
+- a tell bs what to do/where to go/what to look for etc.
+- output formatted usefully [i.e. useful form to input to hat we want to do with is]
+- choose scope [how much to do at once, how often to cutoff etc.]
+- are there limits due site stopping crawlers/scrapers etc. that will affect us or is web connection or is computer speed or what?
+
+
+https://www.linkedin.com/in/$$$$$/
+https://www.linkedin.com/in/koti-taylor-77b021141/
+
+full xpath
+/html/body/div[6]/div[3]/div/div/div[2]/div/div/main/section[1]/div[2]/div[1]/div[1]/div/button/img
+
+html
+<img width="200" title="Koti Taylor" src="https://media.licdn.com/dms/image/v2/D5603AQHVeLPlotpZDA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1713231082784?e=1731542400&amp;v=beta&amp;t=0Fi4FDVmWuM9DuplCscd6g7074SHqvztMbRiU-bbCpg" height="200" alt="Koti Taylor" id="ember33" class="RqpoMtAtvbvzQkhCSspQTBxSYBIggJEofqOwklm pv-top-card-profile-picture__image--show evi-image ember-view">
