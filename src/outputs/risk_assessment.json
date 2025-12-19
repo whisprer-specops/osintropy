@@ -1,0 +1,15 @@
+{
+  "overall_confidence": 0.733,
+  "risk_level": "MODERATE",
+  "source_confidence": 0.6,
+  "data_consistency": 1.0,
+  "coverage_score": 0.833,
+  "recency_score": 0.3,
+  "risk_factors": [
+    "Data is 6152 days old"
+  ],
+  "recommendations": [
+    "MODERATE RISK: Some data quality issues present.",
+    "Cross-reference key findings with additional sources."
+  ]
+}

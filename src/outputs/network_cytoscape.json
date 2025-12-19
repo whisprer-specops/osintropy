@@ -1,0 +1,105 @@
+{
+  "elements": [
+    {
+      "data": {
+        "id": "a2fa1b3a7506ecd8",
+        "label": "John Doe",
+        "type": "person",
+        "name": "John Doe",
+        "age": 35,
+        "location": "Miami, FL",
+        "phones": [
+          "305-555-1234",
+          "305-555-5678"
+        ],
+        "relatives": [
+          "Jane Doe",
+          "Bob Doe"
+        ],
+        "addresses": [
+          "123 Main St, Miami FL"
+        ]
+      }
+    },
+    {
+      "data": {
+        "id": "9b96bc34e6b3b78c",
+        "label": "Jane Doe",
+        "type": "person",
+        "name": "Jane Doe"
+      }
+    },
+    {
+      "data": {
+        "id": "219cba40407aefe1",
+        "label": "Bob Doe",
+        "type": "person",
+        "name": "Bob Doe"
+      }
+    },
+    {
+      "data": {
+        "id": "82bb9cef193e3e4e",
+        "label": "305-555-1234",
+        "type": "phone",
+        "number": "305-555-1234"
+      }
+    },
+    {
+      "data": {
+        "id": "27da65a0f83c7c81",
+        "label": "123 Main St, Miami FL",
+        "type": "location",
+        "address": "123 Main St, Miami FL"
+      }
+    },
+    {
+      "data": {
+        "id": "b000d9dfc856b7bd",
+        "label": "305-555-5678",
+        "type": "phone",
+        "number": "305-555-5678"
+      }
+    },
+    {
+      "data": {
+        "source": "a2fa1b3a7506ecd8",
+        "target": "9b96bc34e6b3b78c",
+        "type": "relative",
+        "weight": 0.8
+      }
+    },
+    {
+      "data": {
+        "source": "a2fa1b3a7506ecd8",
+        "target": "219cba40407aefe1",
+        "type": "relative",
+        "weight": 0.8
+      }
+    },
+    {
+      "data": {
+        "source": "a2fa1b3a7506ecd8",
+        "target": "82bb9cef193e3e4e",
+        "type": "owns_phone",
+        "weight": 0.9
+      }
+    },
+    {
+      "data": {
+        "source": "a2fa1b3a7506ecd8",
+        "target": "27da65a0f83c7c81",
+        "type": "located_at",
+        "weight": 0.7
+      }
+    },
+    {
+      "data": {
+        "source": "a2fa1b3a7506ecd8",
+        "target": "b000d9dfc856b7bd",
+        "type": "owns_phone",
+        "weight": 0.9
+      }
+    }
+  ]
+}

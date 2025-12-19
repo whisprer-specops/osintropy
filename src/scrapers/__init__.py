@@ -1,31 +1,57 @@
-# =====================================
-# scrapers/__init__.py
-# =====================================
 """
-Scraper module initialization and factory
+Web scrapers for various OSINT sources with entropy analysis.
 """
 
-from typing import Optional
-from scrapers.base import BaseScraper
-from scrapers.truepeoplesearch import TruePeopleSearchScraper
-from scrapers.whitepages import WhitepagesScraper
-from scrapers.spokeo import SpokeoScraper
-from scrapers.beenverified import BeenVerifiedScraper
+from .truepeoplesearch import TruePeopleSearchScraper
+from .whitepages import WhitepagesScraper
+from .spokeo import SpokeoScraper
+from .beenverified import BeenVerifiedScraper
 
-AVAILABLE_SCRAPERS = {
+# Scraper registry
+SCRAPERS = {
     'truepeoplesearch': TruePeopleSearchScraper,
     'whitepages': WhitepagesScraper,
     'spokeo': SpokeoScraper,
     'beenverified': BeenVerifiedScraper
 }
 
-def get_scraper(site_name: str) -> Optional[BaseScraper]:
-    """Factory function to get appropriate scraper"""
-    scraper_class = AVAILABLE_SCRAPERS.get(site_name)
-    if scraper_class:
-        return scraper_class()
-    return None
 
-def get_all_scrapers():
-    """Get instances of all available scrapers"""
-    return {name: cls() for name, cls in AVAILABLE_SCRAPERS.items()}
+def get_scraper(source_name: str, **kwargs):
+    """
+    Get scraper instance by name.
+    
+    Args:
+        source_name: Name of the scraper source
+        **kwargs: Arguments to pass to scraper constructor
+        
+    Returns:
+        Scraper instance
+        
+    Raises:
+        ValueError: If scraper not found
+    """
+    if source_name not in SCRAPERS:
+        raise ValueError(f"Unknown scraper: {source_name}. Available: {list(SCRAPERS.keys())}")
+    
+    return SCRAPERS[source_name](**kwargs)
+
+
+def list_scrapers():
+    """
+    Get list of available scrapers.
+    
+    Returns:
+        List of scraper names
+    """
+    return list(SCRAPERS.keys())
+
+
+__all__ = [
+    'TruePeopleSearchScraper',
+    'WhitepagesScraper',
+    'SpokeoScraper',
+    'BeenVerifiedScraper',
+    'get_scraper',
+    'list_scrapers',
+    'SCRAPERS'
+]
