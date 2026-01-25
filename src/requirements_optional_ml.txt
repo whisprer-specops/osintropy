@@ -1,0 +1,5 @@
+# Optional ML tooling (heavy)
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn==1.3.2
+tensorflow==2.14.0

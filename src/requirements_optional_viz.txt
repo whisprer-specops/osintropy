@@ -1,0 +1,5 @@
+# Optional visualization / graph tooling
+networkx>=3.1
+matplotlib>=3.7.0
+pyvis>=0.3.2
+plotly>=5.18.0

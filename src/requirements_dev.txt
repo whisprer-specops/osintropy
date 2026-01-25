@@ -1,0 +1,5 @@
+# Dev / test deps
+pytest>=7.4.0
+pytest-cov>=4.1.0
+unittest2>=1.1.0
+pipdeptree>=2.13.0

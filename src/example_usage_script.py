@@ -25,9 +25,9 @@ def main():
     logger.info("=" * 80)
     
     # Target information
-    target_first_name = "Daniel"
-    target_last_name = "Asplund"
-    target_location = "Knvista, SWE"
+    target_first_name = "Raechel"
+    target_last_name = "Rukstela"
+    target_location = "San Francisco, CA"
     
     # Initialize aggregator
     aggregator = OSINTAggregator(db_path='osint_data.db')
