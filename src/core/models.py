@@ -57,7 +57,13 @@ class PersonRecord:
     # Digital footprint
     social_profiles: Dict[str, str] = field(default_factory=dict)
     
-    # Metadata
+    
+    # Enrichment (best-effort, often sparse for non-notable persons)
+    employers: Set[str] = field(default_factory=set)
+    occupations: Set[str] = field(default_factory=set)
+    urls: Set[str] = field(default_factory=set)
+    web_mentions: List[Dict] = field(default_factory=list)
+# Metadata
     sources: Set[str] = field(default_factory=set)
     confidence_scores: Dict[str, float] = field(default_factory=dict)
     entropy_profile: Dict[str, float] = field(default_factory=dict)

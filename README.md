@@ -775,3 +775,7 @@ Made with 💙 by the security research community
 Information wants to be free, but data wants to be accurate
 
 [![GitHub Repo](https://img.shields.io/badge/GitHub-View%20Source-black?style=for-the-badge&logo=github)](https://github.com/whisprer-specops/osintropy)
+
+new
+cd C:\SD_storage\github\osintropy\src
+python main.py --include-brokers --first-name "john" --last-name "doe" --location "new york" --output "output/jd_report.json"

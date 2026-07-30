@@ -8,6 +8,7 @@ Generate comprehensive OSINT reports
 import json
 from datetime import datetime
 from typing import Dict, Optional
+from pathlib import Path
 from core.models import PersonRecord
 
 class ReportGenerator:
@@ -56,6 +57,15 @@ class ReportGenerator:
                 'associates': list(record.associates)
             },
             
+
+
+            'enrichment': {
+                'employers': sorted(list(record.employers)),
+                'occupations': sorted(list(record.occupations)),
+                'social_profiles': dict(record.social_profiles),
+                'urls': sorted(list(record.urls)),
+                'web_mentions': list(record.web_mentions),
+            },
             'risk_assessment': {
                 'indicators': record.risk_indicators,
                 'entropy_profile': record.entropy_profile,
@@ -74,10 +84,12 @@ class ReportGenerator:
     def save_report(self, report: Dict, filename: str):
         """Save report to file"""
         
-        with open(filename, 'w') as f:
-            json.dump(report, f, indent=2)
-        
-        print(f"[✓] Report saved to {filename}")
+        p = Path(filename)
+        p.parent.mkdir(parents=True, exist_ok=True)
+        with p.open('w', encoding='utf-8') as f:
+            json.dump(report, f, indent=2, ensure_ascii=False)
+
+        print(f"[✓] Report saved to {p}")
     
     def generate_summary(self, report: Dict) -> str:
         """Generate text summary of report"""

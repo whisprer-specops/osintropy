@@ -22,6 +22,19 @@ class Config:
         'beenverified': 5,
         'intelius': 6
     }
+
+    # API keys (optional). If unset, related sources are skipped.
+    GOOGLE_CSE_API_KEY = os.environ.get('GOOGLE_CSE_API_KEY', '')
+    GOOGLE_CSE_CX = os.environ.get('GOOGLE_CSE_CX', '')
+
+    # Programmatic sources rate limiting (seconds between requests)
+    # These endpoints are generally friendlier than scraping, but we still keep it polite.
+    RATE_LIMITS.update({
+        'npi_registry': 1,
+        'fcc_license_view': 1,
+        'wikidata': 1,
+        'google_cse': 1,
+    })
     
     # Request delays (min, max in seconds)
     REQUEST_DELAY_RANGE = (2.0, 5.0)

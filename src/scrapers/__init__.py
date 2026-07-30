@@ -6,13 +6,23 @@ from .truepeoplesearch import TruePeopleSearchScraper
 from .whitepages import WhitepagesScraper
 from .spokeo import SpokeoScraper
 from .beenverified import BeenVerifiedScraper
+from .npi_registry import NPIRegistryScraper
+from .fcc_license_view import FCCLicenseViewScraper
+from .wikidata import WikidataScraper
+from .google_cse import GoogleCSEScraper
 
 # Scraper registry
 SCRAPERS = {
     'truepeoplesearch': TruePeopleSearchScraper,
     'whitepages': WhitepagesScraper,
     'spokeo': SpokeoScraper,
-    'beenverified': BeenVerifiedScraper
+    'beenverified': BeenVerifiedScraper,
+
+    # Programmatic / API sources
+    'npi_registry': NPIRegistryScraper,
+    'fcc_license_view': FCCLicenseViewScraper,
+    'wikidata': WikidataScraper,
+    'google_cse': GoogleCSEScraper,
 }
 
 
@@ -51,6 +61,10 @@ __all__ = [
     'WhitepagesScraper',
     'SpokeoScraper',
     'BeenVerifiedScraper',
+    'NPIRegistryScraper',
+    'FCCLicenseViewScraper',
+    'WikidataScraper',
+    'GoogleCSEScraper',
     'get_scraper',
     'list_scrapers',
     'SCRAPERS'
